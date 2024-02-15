@@ -59,11 +59,14 @@ let isHamburgerActive = ref(false);
     #navigation-links li a:hover{
         color: palevioletred !important;
     }
-    #hamburger-navigation-links{
-        display: none;
-    }
+
 
 }
+
+.hamburger-nav{
+        display: none !important;
+    }
+
 
 @media only screen and (max-width: 768px) {
     #navigation-links li:first-child{
