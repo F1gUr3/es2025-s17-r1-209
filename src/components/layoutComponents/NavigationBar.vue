@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 let isHamburgerActive = ref(false);
 
@@ -10,9 +11,9 @@ let isHamburgerActive = ref(false);
 <nav id="navigation-bar">
         <ul id="navigation-links">
             <li><img src="@assets/images/Logo.png" alt="DineEase colorful logo" ></li>
-            <li></li>
-            <li><a href="pages/aboutUs.html">About us</a></li>
-            <li><a href="pages/ContactUs.html">Contact</a></li>
+            <li><RouterLink to="/">Home</RouterLink></li>
+            <li><RouterLink to="/about-us">About Us</RouterLink></li>
+            <li><RouterLink to="/contact-us">Contact</RouterLink></li>
             <li id="hamburger-menu" v-on:click="isHamburgerActive = !isHamburgerActive">
                 <div v-bind:class="{'bar': true, 'bar-active': isHamburgerActive}"></div>
                 <div v-bind:class="{'bar': true, 'bar-active': isHamburgerActive}"></div>
