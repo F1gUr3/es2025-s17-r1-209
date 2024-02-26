@@ -24,9 +24,9 @@ let isHamburgerActive = ref(false);
     </nav>
     <nav :class="{'hamburger-nav': true, 'hamburger-nav-active': isHamburgerActive}">
         <ul class="hamburger-navigation-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/aboutUs.html">About us</a></li>
-            <li><a href="pages/ContactUs.html">Contact</a></li>
+            <li><RouterLink to="/">Home</RouterLink></li>
+            <li><RouterLink to="/about-us">About Us</RouterLink></li>
+            <li><RouterLink to="/contact-us">Contact</RouterLink></li>
         </ul>
     </nav>
 </template>
