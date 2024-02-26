@@ -4,6 +4,9 @@ import { ref } from 'vue';
 import { onMounted } from 'vue';
 import FeaturedRestaurantCard from './SubComponents/FeaturedRestaurantCard.vue';
 
+
+
+
 let input = ref("");
 
 let isExpanded = ref(false);
@@ -56,7 +59,7 @@ function changeButtonText() {
 
 <template>
 
-<div class="title">
+<div class="title" id="explore">
 <h2>Find Your Perfect Dining Spot</h2>
 <p>Search by Cuisine, Location, or Name</p>
 </div>

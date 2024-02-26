@@ -1,4 +1,20 @@
 <script setup>
+import { onMounted } from 'vue';
+import { ref } from 'vue';
+let explore = ref(null);
+onMounted(() => {
+    explore.value = document.querySelector('#explore');
+
+})
+
+defineEmits([
+    "clickToScroll",
+])
+
+function scrollToExplore(){
+    console.log(explore.value);
+    explore.value.scrollIntoView({behavior: 'smooth'});
+}
 
 </script>
 
@@ -14,7 +30,7 @@
             <div class="hero-content">
                 <h1>DineEase: Exceptional Dining Awaits.</h1>
             <p>Dive into culinary wonders with DineEase. We curate top-rated restaurants, each with distinct flavors and ambiance. From international dishes to traditional delights and gastronomic adventures, find your perfect spot with DineEase.</p>
-            <button><img src="@assets/images/Search Icon.png" alt="A magnifying glass" >Explore restaurants</button>
+            <button v-on:click="$emit('clickToScroll')"><img src="@assets/images/Search Icon.png" alt="A magnifying glass" >Explore restaurants</button>
             </div>
     </div>
 

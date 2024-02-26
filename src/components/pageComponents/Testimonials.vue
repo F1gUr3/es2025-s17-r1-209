@@ -14,10 +14,16 @@ import TestimonialCard from './SubComponents/TestimonialCard.vue';
         </div>
     </div>
     <div class="card-container">
+            <div class="card-col">
                 <TestimonialCard class="test-card" description="Exquisite flavors, impeccable service, and a memorable ambiance – DineEase made our celebration truly special!" reviewer="Robert & Emily"/>
-                <TestimonialCard class="test-card" description="With DineEase, we've uncovered culinary treasures right in our city. Every dining recommendation feels like an exclusive invitation to a world of flavors. We thought we knew our local dining scene, but DineEase introduced us to so much more." reviewer="Emma Jacobs"/>
+
+            </div>
+            <div class="card-col">
+                <TestimonialCard class="test-card" description="With DineEase, we've uncovered culinary treasures right in our city. Every dining recommendation feels like an exclusive invitation to a world of flavors. We thought we knew our local dining scene, but DineEase introduced us to so much more." reviewer="Emma & Jacob"/>
                 <TestimonialCard class="test-card"  description="DineEase guided us to hidden gems we never knew existed! We've become food adventurers, thanks to this platform."  reviewer="Lisa & Mark"/>
 
+            </div>
+                
         
     </div>
 </div>
@@ -30,6 +36,8 @@ import TestimonialCard from './SubComponents/TestimonialCard.vue';
     background-color: #EDE9FE;
     width: 100%;
     height: 100%;
+    min-height: 1000px;
+    display: flex;
     position: relative;
     z-index: -2;
 }
@@ -70,15 +78,27 @@ z-index: 1;
 }
 
 .card-container{
-    width: 80%;
     margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+
+
+}
+.card-col{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
-
+.test-card:nth-child(2){
+    width: 65%;
+    margin-right: auto;
+}
 
 
 </style>

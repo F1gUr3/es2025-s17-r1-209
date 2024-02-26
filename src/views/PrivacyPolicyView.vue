@@ -49,10 +49,9 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
-    margin-top: 3rem;
-
-    h2{
-        font-size: 250%;
+    margin-top: 2rem;
+    h1{
+        font-size: 300%;
         font-weight: 500;
         margin-top: 0;
         margin-bottom: 0;

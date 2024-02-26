@@ -10,9 +10,8 @@ const cardProperties = defineProps({
 <template>
 
 <div class="card-instance">
-    <img src="@assets/images/Quote markvector.svg" alt="Idézőjelek">
     
-    <p class="description">{{ description }}</p>
+    <p class="description">    <img src="@assets/images/Quote markvector.svg" alt="Idézőjelek"> {{ description }}</p>
     <p class="reviewer">{{ reviewer }}</p>
 
 </div>
@@ -23,8 +22,8 @@ const cardProperties = defineProps({
 .card-instance{
     z-index: 10;
     background-color: white;
-    width: 50%;
     position: relative;
+    min-width: 300px;
     height: 100%;
     max-height: 600px;
     border-radius: 5px;
@@ -32,25 +31,25 @@ const cardProperties = defineProps({
     display: flex;
 
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 8px;    
     .description{
-        width: 70%;
+        width: 90%;
+        line-height: 125%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 2rem;
+        font-weight: 300;
     }
     .reviewer{
-        width: 70%;
+        width: 90%;
         margin: 2rem auto 2rem  ;
         
     }
 }
 img{
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    width: 50px;
-    height: 50px;
+
+    width: 15px;
+    height: 15px;
 }
 
 
