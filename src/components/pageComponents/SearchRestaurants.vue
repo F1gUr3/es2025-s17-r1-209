@@ -71,7 +71,7 @@ function changeButtonText() {
 <div class="restaurants">
 <FeaturedRestaurantCard v-for="restaurant in restaurants.slice(0,countOfRestaurantsShown)"  :name="restaurant.name" :description="restaurant.description" :rating="restaurant.rating" :image="restaurant.image" :cuisine="restaurant.cuisine" :location="restaurant.location"/>
 </div>
-<h4 class="expand" v-on:click="changeVisibleRestaurants(); changeButtonText();">Show {{ buttonText }} <img src="@assets/images/Chevron Down Iconvector.svg" alt=""></h4>
+<h4 class="expand" v-on:click="changeVisibleRestaurants(); changeButtonText();">Show {{ buttonText }} <img :class="{ 'rotate':isExpanded }" src="@assets/images/Chevron Down Iconvector.svg" alt=""></h4>
 
 <div class="restaurant-container">
 
@@ -100,6 +100,9 @@ function changeButtonText() {
     filter: invert(38%) sepia(76%) saturate(1163%) hue-rotate(233deg) brightness(97%) contrast(93%);
 
 }
+.rotate{
+ transform: rotate(180deg);   
+}
 .title{
     width: 100%;
 
@@ -123,6 +126,7 @@ function changeButtonText() {
     display: flex;
     justify-content: center;
 }
+
 .filter{
     background-color: #e9e5e5;
     border: none;
