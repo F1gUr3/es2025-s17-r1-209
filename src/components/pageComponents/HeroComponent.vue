@@ -5,11 +5,11 @@
 <template>
 
 
+<div class="blob">
 
+</div>
 <div id="hero-container">
-    <div class="blob">
 
-    </div>
     <div class="hero-col">
             <div class="hero-content">
                 <h1>DineEase: Exceptional Dining Awaits.</h1>

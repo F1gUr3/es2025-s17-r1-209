@@ -1,6 +1,22 @@
 <script setup>
+import { onMounted } from 'vue';
+import { ref } from 'vue';
 import FeaturedRestaurantCard from './SubComponents/FeaturedRestaurantCard.vue';
 
+
+async function getTopRated(url){
+    const fetchResult = await fetch(url).then(res => res.json());
+    
+    return fetchResult;
+
+}
+let restaurantPromise;
+let restaurants = ref([]);
+
+onMounted(async () => {
+        const data = await getTopRated("https://es2025-s17-hu-r1-backend.onrender.com/api/v1/restaurants/top-rated");
+        restaurants.value = data; 
+})
 </script>
 
 <template>
@@ -12,9 +28,7 @@ import FeaturedRestaurantCard from './SubComponents/FeaturedRestaurantCard.vue';
     <p>Discover Unforgettable Dining Destinations</p>
 </div>
     <div class="container">
-    <FeaturedRestaurantCard name="Samale Bistro" cuisine="asd" description="Immerse in Eastern European authenticity at Halász Fogadö. Relish traditional dishes amid an atmosphere rich in charm and history. Join us for a timeless culinary experience." :location="asd" image="https://es2025-s17-hu-r1-backend.onrender.com/Restaurant2.png"  :rating="5"/>
-    <FeaturedRestaurantCard name="asd" cuisine="asd" description="asd" :location="asd" image="https://es2025-s17-hu-r1-backend.onrender.com/Restaurant2.png"  :rating="5" />
-    <FeaturedRestaurantCard name="asd" cuisine="asd" description="asd" :location="asd" image="https://es2025-s17-hu-r1-backend.onrender.com/Restaurant2.png"  :rating="5" />
+    <FeaturedRestaurantCard v-for="restaurant in restaurants" :name="restaurant.name" :cuisine="restaurant.cuisine" :description="restaurant.description" :location="restaurant.location" :image="restaurant.image"  :rating="restaurant.rating"/>
     </div>
     <div class="blob"></div>
 
