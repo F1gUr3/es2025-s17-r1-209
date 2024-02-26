@@ -15,8 +15,8 @@ import TestimonialCard from './SubComponents/TestimonialCard.vue';
     </div>
     <div class="card-container">
                 <TestimonialCard class="test-card" description="Exquisite flavors, impeccable service, and a memorable ambiance – DineEase made our celebration truly special!" reviewer="Robert & Emily"/>
-                <TestimonialCard class="test-card" description="DineEase guided us to hidden gems we never knew existed! We've become food adventurers, thanks to this platform." reviewer="Emma Jacobs"/>
-                <TestimonialCard class="test-card" description="With DineEase, we've uncovered culinary treasures right in our city. Every dining recommendation feels like an exclusive invitation to a world of flavors. We thought we knew our local dining scene, but DineEase introduced us to so much more." reviewer="Lisa & Mark"/>
+                <TestimonialCard class="test-card" description="With DineEase, we've uncovered culinary treasures right in our city. Every dining recommendation feels like an exclusive invitation to a world of flavors. We thought we knew our local dining scene, but DineEase introduced us to so much more." reviewer="Emma Jacobs"/>
+                <TestimonialCard class="test-card"  description="DineEase guided us to hidden gems we never knew existed! We've become food adventurers, thanks to this platform."  reviewer="Lisa & Mark"/>
 
         
     </div>

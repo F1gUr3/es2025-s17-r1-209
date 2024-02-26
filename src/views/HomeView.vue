@@ -2,6 +2,7 @@
 import HeroComponent from '@components/pageComponents/HeroComponent.vue';
 import Testimonials from '../components/pageComponents/Testimonials.vue';
 import FeaturedRestaurants from '../components/pageComponents/FeaturedRestaurants.vue';
+import SearchRestaurants from '../components/pageComponents/SearchRestaurants.vue';
 
 </script>
 
@@ -9,7 +10,7 @@ import FeaturedRestaurants from '../components/pageComponents/FeaturedRestaurant
 <HeroComponent />
 <FeaturedRestaurants />
 <Testimonials />
-<br>
+<SearchRestaurants />
 
 </template>
 

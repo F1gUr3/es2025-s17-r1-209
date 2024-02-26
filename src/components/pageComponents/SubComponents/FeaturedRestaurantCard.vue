@@ -10,6 +10,10 @@ const cardContent = defineProps({
     
 })
 
+let iterableRating = Math.floor(cardContent.rating)
+let hasHalfStarRating = (cardContent.rating == iterableRating);
+let starsRemaining = 5 - iterableRating;
+
 </script>
 
 <template>
@@ -21,7 +25,9 @@ const cardContent = defineProps({
     <div class="title">
         <h2>{{ cardContent.name }}</h2>
         <div class="star-container">
-            <img class="star" v-for="num in rating" :key="num" src="@assets/images/star.png" alt="Értékelés csillag">
+            <img class="star" v-for="num in iterableRating" :key="num" src="@assets/images/star.png" alt="Értékelés csillag">
+            <img class="star black-star" v-for="num in starsRemaining" :key="num" src="@assets/images/star.png" alt="Értékelés csillag">
+
         </div>
     </div>
     <p>{{ cardContent.description }}</p>
@@ -38,7 +44,7 @@ const cardContent = defineProps({
     position: relative;
     height: 400px;
     border-radius: 5px;
-    margin: auto;
+    margin: 1rem auto 1rem auto;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -80,6 +86,9 @@ const cardContent = defineProps({
     margin-left: 0.25rem;
     justify-content: center;
     
+}
+.black-star{
+    filter: grayscale(1.0);
 }
 .star-container{
     width: 100%;
