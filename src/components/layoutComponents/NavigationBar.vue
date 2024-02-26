@@ -40,6 +40,8 @@ let isHamburgerActive = ref(false);
 #navigation-bar{
     display: flex;
     position: relative;
+    padding: 1rem;
+    
     #navigation-links{
         display: flex;
         flex-direction: row;

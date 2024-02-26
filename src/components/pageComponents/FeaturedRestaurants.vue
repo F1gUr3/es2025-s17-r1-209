@@ -49,9 +49,8 @@ onMounted(async () => {
     width: 250px;
     z-index: -5;
     height: 250px;
-    background-color: #402fd8;
+    background-color: #EDE9FE;
     border-radius: 50%;
-    opacity: 0.25;
     position: absolute;
 }
 .blob:first-child{
