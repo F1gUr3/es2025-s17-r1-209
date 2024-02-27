@@ -25,9 +25,8 @@ function changeVisibleRestaurants(){
     }
 }
 
-function searchInList(list){
-    return list.filter((result) => result.toLowerCase().includes(input.value.toLowerCase()));
-}
+
+
 
 async function getTopRated(url){
     const fetchResult = await fetch(url).then(res => res.json());
@@ -37,6 +36,10 @@ async function getTopRated(url){
 }
 let restaurantPromise;
 let restaurants = ref([]);
+let filteredRestaraunts = ref([]);
+
+
+
 
 onMounted(async () => {
         const data = await getTopRated("https://es2025-s17-hu-r1-backend.onrender.com/api/v1/restaurants");
@@ -66,7 +69,7 @@ function changeButtonText() {
 <div class="searchbar">
     <input type="text" v-model="input" placeholder="Search for restaurants" />
     <button class="filter"><img src="@assets/images/Filter Iconvector.svg" alt="" srcset=""> </button>
-    <button class="search"><img src="@assets/images/Search Iconvector.svg" alt="" srcset=""> </button>
+    <button v-on:click="searchInList(restaurants)" class="search"><img src="@assets/images/Search Iconvector.svg" alt="" srcset=""> </button>
 
 </div>
 

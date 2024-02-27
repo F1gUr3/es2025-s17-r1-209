@@ -89,6 +89,8 @@ let formInput = ref({
     margin: auto;
     overflow: hidden;
     margin: 1rem auto 1rem auto;
+    position: relative;
+    z-index: -1;
 }
 .contact-info{
     background-color: #7C3AED;
@@ -101,6 +103,7 @@ let formInput = ref({
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    
     overflow: hidden;
 
 }
