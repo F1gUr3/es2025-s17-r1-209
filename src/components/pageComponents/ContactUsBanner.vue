@@ -52,4 +52,9 @@ a:hover{
 }
 
 }
+@media only screen and (max-width: 768px) {
+    p{
+        width: 90% !important;
+    }
+}
 </style>

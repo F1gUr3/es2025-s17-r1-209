@@ -94,7 +94,7 @@ margin-top: 3rem;
 }
 .blob::after{
     font-weight: 300;
-    font-size: 75%;
+    font-size: 80%;
 }
 .blob::before{
     font-size: 115%;

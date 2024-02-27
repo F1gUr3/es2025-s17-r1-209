@@ -2,8 +2,8 @@
 import { ref } from 'vue';
 import Title from './Title.vue';
 import Elena from '@assets/images/Person1vector.svg';
-import Raj from '@assets/images/Person2vector.svg';
-import Sophia from '@assets/images/Person3vector.svg';
+import Sophia from '@assets/images/Person2vector.svg';
+import Raj from '@assets/images/Person3vector.svg';
 import Lucas from '@assets/images/Person4vector.svg';
 import Aisha from '@assets/images/Person5vector.svg';
 
@@ -81,6 +81,19 @@ flex-wrap: wrap;
 .person>img{
     width: 35%;
     margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .person{
+        flex-basis: calc(100% / 2);
+            width: calc(100% / 2);
+            margin-bottom: 2rem;
+            img{
+                width: 50%;
+            }
+
+    }
+    
 }
 
 </style>
