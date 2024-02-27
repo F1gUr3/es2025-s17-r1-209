@@ -15,7 +15,6 @@ let countOfRestaurantsShown = ref(3);
 function changeVisibleRestaurants(){
     if(countOfRestaurantsShown.value == 3){
         countOfRestaurantsShown.value = restaurants.value.length;
-        console.log(countOfRestaurantsShown.value);
         isExpanded.value = true;
 
     }

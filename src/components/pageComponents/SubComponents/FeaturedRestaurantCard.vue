@@ -1,4 +1,6 @@
 <script setup>
+import { onMounted } from 'vue';
+
 
 const cardContent = defineProps({
     name: String,
@@ -11,9 +13,8 @@ const cardContent = defineProps({
 })
 
 let iterableRating = Math.floor(cardContent.rating)
-let hasHalfStarRating = (cardContent.rating == iterableRating);
-let starsRemaining = 5 - iterableRating;
-
+let hasHalfStarRating = (cardContent.rating != 5 && cardContent.rating == iterableRating) ? 1 : 0;
+let starsRemaining = (5 - iterableRating)  - hasHalfStarRating;
 </script>
 
 <template>
@@ -25,8 +26,9 @@ let starsRemaining = 5 - iterableRating;
     <div class="title">
         <h2>{{ cardContent.name }}</h2>
         <div class="star-container">
-            <img class="star" v-for="num in iterableRating" :key="num" src="@assets/images/star.png" alt="Értékelés csillag">
-            <img class="star black-star" v-for="num in starsRemaining" :key="num" src="@assets/images/star.png" alt="Értékelés csillag">
+            <img class="star" v-for="num in iterableRating" :key="num" src="@assets/images/star.png" alt="Review Star">
+            <img class="star" v-if="hasHalfStarRating > 0" src="@assets/images/halfstar.png" alt="half Review star">
+            <img class="star black-star" v-for="num in starsRemaining" :key="num" src="@assets/images/star.png" alt="Review star blacked out">
 
         </div>
     </div>
@@ -88,7 +90,8 @@ let starsRemaining = 5 - iterableRating;
     
 }
 .black-star{
-    filter: grayscale(1.0);
+    filter: invert(0%) sepia(0%) saturate(7484%) hue-rotate(66deg) brightness(20%) contrast(104%);
+
 }
 .star-container{
     width: 100%;

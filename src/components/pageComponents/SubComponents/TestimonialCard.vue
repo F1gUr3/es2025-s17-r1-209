@@ -11,7 +11,7 @@ const cardProperties = defineProps({
 
 <div class="card-instance">
     
-    <p class="description">    <img src="@assets/images/Quote markvector.svg" alt="Idézőjelek"> {{ description }}</p>
+    <p class="description">    <img src="@assets/images/Quote markvector.svg" alt="Quotation mark"> {{ description }}</p>
     <p class="reviewer">{{ reviewer }}</p>
 
 </div>

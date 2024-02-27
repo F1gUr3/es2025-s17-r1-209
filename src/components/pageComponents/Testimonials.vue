@@ -9,7 +9,7 @@ import TestimonialCard from './SubComponents/TestimonialCard.vue';
 <div class="container">
     <div class="title">
         <div class="inner-title">
-            <img src="@assets/images/Quote markvector.svg" alt="">
+            <img src="@assets/images/Quote markvector.svg" alt="Quotation mark">
         <h2>Delightful Experiences Shared by Our Guests</h2>
         </div>
     </div>
