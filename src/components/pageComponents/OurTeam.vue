@@ -56,7 +56,7 @@ let teamArray = ref([
 
 .team-container{
 display: flex;
-width: 75%;
+width: 50%;
 margin: 2rem auto;
 justify-content: center;
 align-items: center;
@@ -70,10 +70,16 @@ flex-wrap: wrap;
     flex-direction: column;
     flex-basis: calc(100% / 3);
     width: calc(100% / 3);
-
+    h2{
+        font-size: 100%;
+    }
+    p{
+        font-size: 75%;
+        font-weight: 300;
+    }
 }
 .person>img{
-    width: 25%;
+    width: 35%;
     margin: auto;
 }
 
