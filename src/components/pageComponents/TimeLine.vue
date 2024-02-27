@@ -192,6 +192,15 @@ margin-top: 3rem;
     transform: translateX(-50%);
 
 }
+@media only screen and (max-width: 768px) {
+.timeline{
+    width: 100%;
+}
+.timeline::after{
+    width: 100%;
+}
+
+}
 
 
 </style>

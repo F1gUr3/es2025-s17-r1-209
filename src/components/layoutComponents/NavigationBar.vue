@@ -116,7 +116,7 @@ let isHamburgerActive = ref(false);
             width: 100%;
             height: auto !important;
             transition-duration: 300ms;
-            background-color: rgba(255, 255, 255, 0.142);
+            background-color: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(10px);
           }
           .hamburger-nav-active{
