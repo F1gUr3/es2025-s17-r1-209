@@ -87,4 +87,17 @@
     margin-right: 0.5rem;
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  .info-box{
+    font-size: 75%;
+  }
+  .social-links{
+    img{
+      width: 25%;
+    }
+  }
+
+}
 </style>

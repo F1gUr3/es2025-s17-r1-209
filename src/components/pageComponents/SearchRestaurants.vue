@@ -174,4 +174,12 @@ input:focus, input:focus + .filter{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+
+@media only screen and (max-width: 768px) {
+    .restaurants{
+        grid-template-columns: repeat(1, 1fr);
+}
+
+}
 </style>

@@ -81,8 +81,8 @@ let starsRemaining = 5 - iterableRating;
     }
 }
 .star{
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     margin-left: 0.25rem;
     justify-content: center;
     
@@ -107,7 +107,7 @@ let starsRemaining = 5 - iterableRating;
 
     h2{
         font-weight: 500;
-        font-size: 125%;
+        font-size: 150%;
         width: 100%;
 
     }
@@ -130,7 +130,7 @@ height: fit-content;
 width: 90%;
 }
 .card-image-container{
-    max-height: 12.5rem;
+    max-height: 15rem;
 
 }
 .card-image{

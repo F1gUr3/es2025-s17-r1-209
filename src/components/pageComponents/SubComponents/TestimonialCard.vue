@@ -20,7 +20,7 @@ const cardProperties = defineProps({
 
 <style scoped>
 .card-instance{
-    z-index: 10;
+    z-index: 1;
     background-color: white;
     position: relative;
     min-width: 300px;
@@ -50,6 +50,18 @@ img{
 
     width: 15px;
     height: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+.description{
+    width: 75% !important;
+    
+}
+.reviewer{
+    width: 75% !important;
+}
+
+
 }
 
 

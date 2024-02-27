@@ -51,11 +51,12 @@ function scrollToExplore(){
 .blob{
     position: absolute;
     top: -50px;
-    right: -50px;
+    right: 0px;
     z-index: -1;
     width: 300px;
     height: 300px;
-    background-color: #6335c7cb;
+    background-color: #7C3AED;
+    opacity: 0.2;
     filter: blur(100px);
     border-radius: 50%;
     overflow: hidden;
@@ -149,11 +150,14 @@ transition-duration: 300ms;
     .blob{
         display: none;
     }
+    .hero-col{
+        height: fit-content;
+    }
     .hero-col:nth-child(2)>img{
     height: 100%;
-    width: 100%;
+    width: 80%;
     object-fit: cover;
-    }
+border-bottom: 1px solid rgba(128, 128, 128, 0.481);    }
     .hero-content{
         padding: 1rem;
         width: 100%;
@@ -161,19 +165,20 @@ transition-duration: 300ms;
         overflow: visible !important;
     }
     .hero-content h1{
-        font-size: 200%;
+        font-size: 300%;
         width: 100%;
 
 
     }
     .hero-content p{
-        font-size: 80%;
+        font-size: 100%;
         width: 100%;
         margin-bottom: 0.25rem;
+        line-height: 1.25;
     }
     .hero-content button{
         margin-top: 1rem;
-        padding: 0.75rem;
+        padding: 1rem 1.5rem;
     }
 
 

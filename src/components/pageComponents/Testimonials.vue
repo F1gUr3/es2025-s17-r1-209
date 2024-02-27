@@ -15,10 +15,11 @@ import TestimonialCard from './SubComponents/TestimonialCard.vue';
     </div>
     <div class="card-container">
             <div class="card-col">
-                <TestimonialCard class="test-card" description="Exquisite flavors, impeccable service, and a memorable ambiance – DineEase made our celebration truly special!" reviewer="Robert & Emily"/>
+                <TestimonialCard class="test-card desktop-view-test-card" description="Exquisite flavors, impeccable service, and a memorable ambiance – DineEase made our celebration truly special!" reviewer="Robert & Emily"/>
 
             </div>
             <div class="card-col">
+                <TestimonialCard class="test-card mobile-view-test-card" description="Exquisite flavors, impeccable service, and a memorable ambiance – DineEase made our celebration truly special!" reviewer="Robert & Emily"/>
                 <TestimonialCard class="test-card" description="With DineEase, we've uncovered culinary treasures right in our city. Every dining recommendation feels like an exclusive invitation to a world of flavors. We thought we knew our local dining scene, but DineEase introduced us to so much more." reviewer="Emma & Jacob"/>
                 <TestimonialCard class="test-card"  description="DineEase guided us to hidden gems we never knew existed! We've become food adventurers, thanks to this platform."  reviewer="Lisa & Mark"/>
 
@@ -60,8 +61,8 @@ import TestimonialCard from './SubComponents/TestimonialCard.vue';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     z-index: -1;
 }
 .inner-title h2
@@ -70,7 +71,7 @@ import TestimonialCard from './SubComponents/TestimonialCard.vue';
     position: absolute;
     top: 5%;
     left: 5%;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 300%;
     width: 35%;
 
@@ -100,5 +101,50 @@ z-index: 1;
     margin-right: auto;
 }
 
+.mobile-view-test-card{
+        display: none;
+    }
+    .desktop-view-test-card{
+        display: block;
+    }
+
+
+@media only screen and (max-width: 768px) {
+
+    .card-container{
+        
+    }
+    .title{
+        left: 0px;
+        top: 10px;
+    }
+    .inner-title{
+        h2{
+            width: 90%;
+            font-size: 250%;
+            position: absolute;
+            top: 75px;
+        }
+        img{
+            left: 25px;
+        }
+    }
+    .test-card{
+        width: 100% !important;
+        margin-right: auto;
+
+
+        
+    }
+
+    
+    .mobile-view-test-card{
+        display: block;
+    }
+    .desktop-view-test-card{
+        display: none;
+    }
+
+}
 
 </style>

@@ -117,7 +117,9 @@ onMounted(async () => {
         margin-bottom: 0;
     }
     }
-    
+    .blob{
+        display: none;
+    }
 
 }
 
