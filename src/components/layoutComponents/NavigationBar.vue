@@ -122,7 +122,7 @@ let isHamburgerActive = ref(false);
           .hamburger-nav-active{
             display: block !important;
             position: absolute ;
-            top: 100px;
+            top: 50px;
             left: 50%;
             
             transform: translateX(-50%);

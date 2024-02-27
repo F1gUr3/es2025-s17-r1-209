@@ -141,4 +141,42 @@ transition-duration: 300ms;
 
 
 }
+
+@media only screen and (max-width: 768px) {
+    #hero-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blob{
+        display: none;
+    }
+    .hero-col:nth-child(2)>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    }
+    .hero-content{
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        overflow: visible !important;
+    }
+    .hero-content h1{
+        font-size: 200%;
+        width: 100%;
+
+
+    }
+    .hero-content p{
+        font-size: 80%;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    .hero-content button{
+        margin-top: 1rem;
+        padding: 0.75rem;
+    }
+
+
+
+}
 </style>

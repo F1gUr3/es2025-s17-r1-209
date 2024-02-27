@@ -91,5 +91,34 @@ onMounted(async () => {
     
 }
 
+@media only screen and (max-width: 768px) {
+
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .featured-title{
+        width: 100%;
+
+    margin: 1rem auto 1rem auto;
+
+    h2{
+        text-align: center;
+        font-size: 250%;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    p{
+        text-align: center;
+        font-weight: 300;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+    }
+    }
+    
+
+}
 
 </style>

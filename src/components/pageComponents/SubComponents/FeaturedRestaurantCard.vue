@@ -124,5 +124,24 @@ let starsRemaining = 5 - iterableRating;
     
 }
 
+@media only screen and (max-width: 768px) {
+.card-body{
+height: fit-content;
+width: 90%;
+}
+.card-image-container{
+    max-height: 12.5rem;
+
+}
+.card-image{
+    object-fit: cover;
+    padding: 1rem 0rem !important;
+}
+a{
+    position: static !important;
+    margin-left: auto;
+    padding: 1rem;
+}
+}
 
 </style>
